@@ -1,0 +1,12 @@
+.content-block-carousel {
+    &.width-full-width {
+        &.cols-per-row-1 {
+            .styles {
+                &.bg-image {
+                    margin-left: -15px;
+                    margin-right: -15px;
+                }
+            }
+        }
+    }
+}

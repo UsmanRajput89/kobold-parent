@@ -1,0 +1,39 @@
+@import "bootstrap-variables-override"; 
+@import 'bootstrap-override';
+@import "vendor/animate/animate";
+
+//customized for theme
+@import "vendor/gravityforms/browsers";
+@import "vendor/gravityforms/formsmain";
+@import "vendor/gravityforms/readyclass";
+@import "vendor/gravityforms/datepicker";
+//eo customized for theme//
+
+@import "utils/mixins";
+@import "utils/variables";
+
+@import "partials/accessibility";
+@import "partials/container";
+
+@import "partials/fonts";
+@import "partials/typography";
+@import "partials/wp"; 
+@import "partials/buttons-cta";
+@import "partials/bg";
+@import "partials/bg-video";
+@import "partials/carousel";
+@import "partials/accordion";
+
+@import "partials/header";
+@import "partials/footer";
+
+@import "partials/breadcrumb";
+@import "partials/flex";
+@import "partials/blog";
+@import "partials/sidebar";
+@import "partials/hero";
+@import "partials/forms";
+@import "partials/search";
+@import "partials/table";
+@import "partials/gallery";
+@import "partials/modules";

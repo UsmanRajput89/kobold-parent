@@ -1,0 +1,34 @@
+.pull-singles {
+    
+    .col {
+        margin-bottom: 30px;
+    }
+    
+    .item {
+        border: 1px solid $line;
+        padding: 30px;
+        height: 100%;
+        text-align: center;
+        
+        .thumb {
+            display: block;
+            
+            @media(max-width: $screen-sm-max){
+               background-image: none !important;
+               margin-bottom: 30px;
+            }
+            @media(min-width: $screen-md){
+                height: 200px;
+                margin: -30px -30px 30px;
+            }
+        }
+        
+        [data-mh]{
+            margin-bottom: 30px;
+        }
+        
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

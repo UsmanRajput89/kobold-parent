@@ -1,0 +1,115 @@
+.editor {
+    &-short .acf-editor-wrap iframe {
+        min-height: 0 !important;
+        height: 100px !important;
+    }
+    
+    &-medium .acf-editor-wrap iframe {
+        min-height: 0 !important;
+        height: 200px !important;
+    }
+}
+
+.rb-2-col-opts {
+    .acf-radio-list {
+        label {
+            color: transparent;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 25px;
+            display: block;
+            outline: 2px solid transparent;
+            -moz-transition: all 0.15s ease-in-out;
+            -o-transition: all 0.15s ease-in-out;
+            -webkit-transition: all 0.15s ease-in-out;
+            transition: all 0.15s;
+
+            &.selected {
+                outline: 2px solid #2cb34b;
+            }
+            
+            input {
+                display: none;
+            }
+
+        }
+        
+        li {
+            &:nth-child(1) label{
+                background-image: url('../images/admin/2cols-1_1.png');
+            }
+            
+            &:nth-child(2) label{
+                background-image: url('../images/admin/2cols-1_3.png');
+            }
+            
+            &:nth-child(3) label{
+                background-image: url('../images/admin/2cols-3_1.png');
+            }
+            
+            &:nth-child(4) label{
+                background-image: url('../images/admin/2cols-5_7.png');
+            }
+            
+            &:nth-child(5) label{
+                background-image: url('../images/admin/2cols-7_5.png');
+            }
+        }
+    }
+}
+
+.row-img {
+    .image-wrap {
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+}
+
+//hide subsets in google font acf field
+.acfgfs-font-subsets {
+    display: none;
+}
+
+.acfgfs-font-family {
+    width: 300px;
+    position: absolute;
+    left: 0;
+}
+
+.acfgfs-font-selector {
+    position: relative;
+    padding-left: 300px;
+    min-height: 125px;
+}
+
+.acfgfs-font-variants {
+    width: auto;
+    margin-left: 2%;
+    float: none;
+    
+    .acfgfs-form-control-title:after {
+        content: "(check one)";
+        margin-left: 5px;
+        text-transform: lowercase;
+    }
+    
+    .acfgfs-list {
+        padding-top: 3px;
+        
+        label {
+            margin-right: 20px;
+        }
+        
+        & > div {
+            float: left;
+        }
+    }
+}
+
+[data-name="ind_h_font"] {
+    .acf-fields.-left > .acf-field > .acf-label { width: 50px;}
+    .acf-fields.-left > .acf-field:before { width: 45px;}
+}

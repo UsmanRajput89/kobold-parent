@@ -1,0 +1,120 @@
+$light-grey : #f4f4f4;
+$black : black;
+.anchor-section {
+	position: relative;
+	
+	.anchor-fixed-container {
+		position: relative;
+		z-index: 12;
+		width: 100%;
+		background-color: $light-grey;
+		
+		@media (max-width: $screen-sm-max) {
+			position: static !important;
+		}
+	}
+
+	.anchor-bg-container {
+		width: 100%;
+		@include transition();
+		&.anchor-bg {
+			background-color: $light-grey;
+			@include transition();
+			
+			ul.anchor-list li {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	&.menu-fixed-top {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 98;
+		border: none;
+		
+		@media (max-width: $screen-sm-max) {
+			position: static !important;
+		}
+	}
+
+	&.menu-fixed-top-wp {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 98;
+		
+		@media (max-width: $screen-sm-max) {
+			position: static !important;
+		}
+	}
+
+	@media (max-width: $screen-sm-max) {
+		position: static !important;
+	}
+
+	.anchor-container {
+		text-align: center;
+
+		ul.anchor-list {
+			padding: 10px 0;
+			margin: 0;
+			display: block;
+			width: auto;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			background-color: $light-grey;
+			text-align: center;
+
+			li {
+				list-style: none;
+				line-height: 0;
+				padding: 21px 36px;
+				max-width: 320px;
+				display: inline-block;
+				border-left: none;
+				margin: 0;
+				@include transition();
+
+				a {
+					color: $copy-color;
+					text-decoration: none;
+					font-size: 16px;
+					line-height: 1.4;
+					padding: 0;
+					display: inline;
+					@include transition();
+					&:hover {
+						@include transition();
+						border-bottom: 2px solid $copy-color;
+					}
+				}
+
+				ul.sub-menu {
+					display: none;
+					li {
+
+					}
+				}
+
+				&.active {
+					a {
+						@include transition();
+						border-bottom: 2px solid $copy-color;
+					}
+				}
+
+				&:before {
+					content: none;
+				}
+
+				&:first-child {
+					border-left: none;
+				}
+			}
+		}
+	}
+}

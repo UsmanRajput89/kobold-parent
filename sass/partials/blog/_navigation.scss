@@ -1,0 +1,53 @@
+.post-nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    @media(min-width: $screen-sm){
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    a {
+        font-size: 14px;
+        line-height: 1.28;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include montserrat();
+    }
+    
+    .page-numbers:not(.prev):not(.next){
+        padding: 0 4px;
+    }
+    
+    .prev, [rel="prev"] {
+        i {
+            margin-right: 5px;
+        }
+    }
+    
+    .next, [rel="next"] {
+        i {
+            margin-left: 5px;
+        }
+    }
+    
+    .nav-links {
+        padding-left: 96px;
+        padding-right: 61px;
+        position: relative;
+        text-align: center;
+        
+        .prev {
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+        
+        .next {
+            position: absolute;
+            right: 0;
+            top: 6px;
+        }
+    }
+}

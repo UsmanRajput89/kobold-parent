@@ -1,0 +1,23 @@
+.searchform {
+    position: relative;
+    
+    @media(min-width: $screen-sm){
+        padding-right: 131px;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+    }
+    
+    .button, input[type="submit"] {
+        @extend .button;
+        padding: 16px 25px;
+        @media(min-width: $screen-sm){
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: auto;
+        }
+        
+    }
+}

@@ -1,0 +1,226 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    @include roboto();
+    color: $copy-color;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: normal;
+    @include font-smoothing();
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: none;
+    color: black;
+    line-height: 1.2;
+    @include montserrat();
+    
+    > a:not(.cta):not(.button) {
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+	text-transform: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	text-decoration: inherit;
+	
+	&:visited {
+	    color: inherit;
+	}
+    }
+    
+    > a.cta, > a.button {
+	vertical-align: middle;
+	margin-left: 30px;
+    }
+}
+
+h1, .h1{
+    font-size: 40px;
+}
+
+h2, .h2 {
+    font-size: 35px;
+}
+
+h3, .h3 {
+    font-size: 30px;
+}
+
+h4, .h4 {
+    font-size: 25px;    
+}
+
+h5, .h5 {
+    font-size: 18px;
+}
+
+h6, .h6 {
+    font-size: 15px;
+}
+
+p, .p {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin-bottom: 20px;
+    
+    &.lead {
+	font-style: italic;
+    }
+}
+
+a {
+    color: $blue;
+    text-decoration: underline;
+    
+    &:hover {
+	text-decoration: none;
+	color: $blue;
+	
+	.white-text & {
+	    color: $blue;
+	}
+    }
+    
+    &:visited {
+	color: $blue;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote {
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+    border-color: #EE975C;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    p {
+	font-size: 22px;
+	line-height: 1.63;
+    }
+}
+
+sup {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2.25;
+    color: $teal;
+    text-transform: uppercase;
+    
+    + * {
+	margin-top: -.25em;
+    }
+}
+
+ul, ol {
+    margin-bottom: 20px;
+    
+    li {
+	margin-bottom: 20px;
+    }
+}
+
+.wp-caption {
+    display: inline-block;
+    border-bottom: 3px solid $teal;
+    margin-bottom: 20px;
+}
+
+.wp-caption-text {
+    font-size: 16px;
+    line-height: 1.68;
+    font-style: italic;
+    margin-bottom: 0;
+}
+.white-text {
+    
+    .editor-content, &.boxed {
+        *:not(.button):not(.cta):not(option):not(strong):not(em) { 
+            color: white;
+        }
+    }
+} 
+
+.margin-bottom{
+  &-5 {
+    margin-bottom: 5px;
+  }
+  &-10 {
+    margin-bottom: 10px;
+  }
+  &-15 {
+    margin-bottom: 15px;
+  }
+  &-20 {
+    margin-bottom: 20px;
+  }
+  &-25 {
+    margin-bottom: 25px;
+  }
+  &-30 {
+    margin-bottom: 30px;
+  }
+  &-35 {
+    margin-bottom: 35px;
+  }
+  &-40 {
+    margin-bottom: 40px;
+  }
+  &-45 {
+    margin-bottom: 45px;
+  }
+  &-50 {
+    margin-bottom: 50px;
+  }
+}
+
+.font-weight {
+    &-300 {
+	font-weight: 300;
+    }
+    
+    &-400 {
+	font-weight: 400;
+    }
+    
+    &-700 {
+	font-weight: 700;
+    }
+}
+
+.editor-content {
+    iframe {
+	max-width: 100%;
+    }
+}
+
+.about-info-heading {
+    color: #9CA2B0;
+    font-family: "Source Sans Pro";
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 63px;
+}
+
+.about-paragraph {
+    color: rgb(99, 105, 111);
+    font-family: "Open Sans";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+
+.about-hero {
+    text-align: center !important;
+}
+

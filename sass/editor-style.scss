@@ -1,0 +1,14 @@
+@import "bootstrap-variables-override"; 
+@import 'bootstrap-override';
+
+@import "utils/mixins";
+@import "utils/variables";
+@import "partials/fonts";
+@import "partials/typography";
+@import "partials/buttons-cta";
+@import "partials/wp";
+@import "partials/table";
+
+#tinymce {
+    padding: 10px;
+}

@@ -1,0 +1,116 @@
+.panel-group {
+    
+    .panel {
+        margin-bottom: 10px;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        background: none;
+        
+        .panel-collapse {
+            .panel-body {
+                padding: 25px;
+                border: none;
+            }
+        }
+        
+    }
+
+    .panel-heading {
+        background: none;
+        border: none;
+        padding: 0;
+        
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 18px 55px 18px 23px;
+            box-shadow: 0 10px 20px rgba(0,0,0,.1);
+            border: 1px solid $line;
+            position: relative;
+            border-radius: 5px;
+            
+            &:not(.collapsed){
+                .toggle {
+                    &:before {
+                        content: fa-content($fa-var-caret-up);
+                    }
+                }
+            }
+        }
+        
+        .panel-title {
+            margin-bottom: 0;
+            color: black;
+            color: $copy-color;
+        }
+        
+        .toggle {
+            position: absolute;
+            right: 23px;
+            top: 0;
+            line-height: 55px;
+            font-size: 20px;
+            color: $teal;
+    
+            &:before {
+                @include fa-icon;
+                content: fa-content($fa-var-caret-down);
+                @include fas();
+            }
+        }
+    }
+    
+    .editor-content {
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    //categories
+    .nav-tabs {
+        border: none;
+        text-align: center;
+        margin-bottom: 27px;
+        
+        li {
+            margin: 0;
+            float: none;
+            display: inline-block;
+            
+            &.active {
+                a {
+                    border: none;
+                    border-bottom: 2px solid $teal;
+                }
+            }
+            a {
+                text-decoration: none;
+                padding: 3px 11px;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                @include transition();
+                @include montserrat();
+                margin: 0 7px;
+                border: none;
+                border-bottom: 2px solid transparent;
+                color: $blue;
+                cursor: pointer;
+                line-height: 20px;
+                border-radius: 0;
+                
+                &:hover, &:focus, &:active {
+                    outline: none;
+                    background: none;
+                    color: $blue;
+                }
+                
+                &:hover {
+                    border: none;
+                    border-bottom: 2px solid $teal;
+                }
+            }
+        }
+    }
+}

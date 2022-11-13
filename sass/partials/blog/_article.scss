@@ -1,0 +1,105 @@
+.post-hero {
+    background-color: #f3f3f3;
+}
+
+.post,
+.page {
+    &.has-post-thumbnail {
+        .article-content {
+            position: relative;
+
+            .text {
+                border: solid red;
+                img {
+                    max-width: 300px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .post-roll & {
+                @media (min-width: $screen-sm) {
+                    padding-right: 50%;
+                }
+            }
+
+            .thumb {
+                display: block;
+                @extend .bg-cover;
+
+                .post-roll & {
+                    height: 300px;
+
+                    @media (min-width: $screen-sm) {
+                        width: 50%;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-roll & {
+        border: 1px solid $line;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+        .text {
+            padding: 25px 20px 20px;
+
+            @media (min-width: $screen-sm) {
+                padding: 45px 40px 40px;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+article {
+    &.post,
+    &.page {
+        footer {
+            border-top: 1px solid $line;
+            margin-top: 10px;
+            padding-top: 10px;
+            color: $grey;
+
+            @media (min-width: $screen-sm) {
+                margin-top: 30px;
+                padding-top: 30px;
+            }
+
+            * {
+                color: inherit;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 15px;
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-post-excerpt {
+    .text {
+        img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,218 @@
+.content-block-2col {
+    &.increased_gutter {
+        
+        &.width {
+            &-1_1 {
+                .col-left {
+                    
+                    .editor-content {
+                        @media (min-width: $screen-md){
+                            padding-right: 22px;
+                        }
+                    }
+                     
+                }
+                
+                .col-right {
+                    
+                    .editor-content {
+                        @media (min-width: $screen-md){
+                            padding-left: 22px;
+                        }
+                    }
+                    
+                }
+            }
+                
+            &-5_7, &-1_3 {
+                
+                .col-right {
+                    
+                    .editor-content {
+                        @media (min-width: $screen-md){
+                            padding-left: 44px;
+                        }
+                    }
+                    
+                }
+            }
+                
+            &-7_5, &-3_1 {
+                
+                .col-left {
+                    
+                    .editor-content {
+                        @media (min-width: $screen-md){
+                            padding-right: 44px;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        
+    }
+    
+    .col {
+        &.border-col-side {
+            &.col-left {
+                @media(min-width: $screen-md){
+                    border-right: 1px solid $line;
+                }
+            }
+        }
+        
+        &.border-col-bottom {
+            &.gutter {
+                
+                &-none {
+                    @media(min-width: $screen-md){
+                        .styles {
+                            border-bottom: 1px solid $line;
+                            
+                            &.bg-none {
+                                border-bottom: none;
+                                
+                                &:after {
+                                    content: "";
+                                    height: 1px;
+                                    background: $line;
+                                    display: block;
+                                    position: absolute;
+                                    width: calc(100% - 60px);
+                                    bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                &-normal {
+                    @media(min-width: $screen-md){
+                        padding-bottom: 30px;
+                        
+                        .styles {
+                            &:after {
+                                content: "";
+                                height: 1px;
+                                background: $line;
+                                display: block;
+                                position: absolute;
+                                width: calc(100% - 30px);
+                                bottom: 0;
+                            }
+                            
+                            &.bg-color, &.bg-image, &.bg-video { 
+                                &:after {
+                                    left: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                &-double {
+                    @media(min-width: $screen-md){
+                        padding-bottom: 60px;
+                        
+                        .styles {
+                            &:after {
+                                content: "";
+                                height: 1px;
+                                background: $line;
+                                display: block;
+                                position: absolute;
+                                width: calc(100% - 60px);
+                                bottom: 0;
+                            }
+                            
+                            &.bg-color, &.bg-image, &.bg-video { 
+                                &:after {
+                                    left: 30px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+        &.border-col-top {
+            &.gutter {
+                
+                &-none {
+                    @media(min-width: $screen-md){
+                        .styles {
+                            border-top: 1px solid $line;
+                            
+                            &.bg-none {
+                                border-top: none;
+                                
+                                &:before {
+                                    content: "";
+                                    height: 1px;
+                                    background: $line;
+                                    display: block;
+                                    position: absolute;
+                                    width: calc(100% - 60px);
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                &-normal {
+                    @media(min-width: $screen-md){
+                        padding-top: 30px;
+                        
+                        .styles {
+                            &:before {
+                                content: "";
+                                height: 1px;
+                                background: $line;
+                                display: block;
+                                position: absolute;
+                                width: calc(100% - 30px);
+                                top: 0;
+                            }
+                            
+                            &.bg-color, &.bg-image, &.bg-video { 
+                                &:before {
+                                    left: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                &-double {
+                    @media(min-width: $screen-md){
+                        padding-top: 60px;
+                        
+                        .styles {
+                            &:before {
+                                content: "";
+                                height: 1px;
+                                background: $line;
+                                display: block;
+                                position: absolute;
+                                width: calc(100% - 60px);
+                                top: 0;
+                            }
+                            
+                            &.bg-color, &.bg-image, &.bg-video { 
+                                &:before {
+                                    left: 30px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

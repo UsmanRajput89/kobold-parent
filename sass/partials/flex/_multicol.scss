@@ -1,0 +1,208 @@
+.content-block-multi-col {
+    &.cols-per-row {
+        &-3 { //stacks on $screen-md-max and down
+            
+            .border-col-side {
+                
+                @media (min-width: $screen-lg){
+                    &.col:not(:nth-child(3n)) {
+                        border-right: 1px solid $line;
+                    }
+                }
+                
+            }
+            
+        }
+        
+        &-4 { //stacks on $screen-sm-max and down
+            
+            .border-col-side {
+                
+                @media (min-width: $screen-md) and (max-width: $screen-md-max){
+                    &.col:not(:nth-child(2n)) {
+                        border-right: 1px solid $line;
+                    }
+                }
+                
+                @media (min-width: $screen-lg){
+                    &.col:not(:nth-child(4n)) {
+                        border-right: 1px solid $line;
+                    }
+                }
+            }
+        }
+        
+        &-5 { //stacks on $screen-md-max and down
+            .border-col-side {
+                
+                @media (min-width: $screen-lg) and (max-width: $screen-lg-max){
+                    &.col:not(:nth-child(3n)) {
+                        border-right: 1px solid $line;
+                    }
+                }
+                
+                @media (min-width: $screen-xlg){
+                    &.col:not(:nth-child(5n)) {
+                        border-right: 1px solid $line;
+                    }
+                }
+            }
+        }
+        
+        &-6 { //stacks on $screen-sm-max and down
+            .border-col-side {
+                @media (min-width: $screen-md){
+                    &.col:not(:nth-child(3n)) {
+                        border-right: 1px solid $line;
+                    }
+                }
+                
+                @media (min-width: $screen-lg){
+                    &.col:not(:nth-child(6n)) {
+                        border-right: 1px solid $line;
+                    }
+                }
+            }
+        }
+    }
+    
+    .border-col-bottom {
+        &.gutter {
+                
+            &-none {
+                .styles {
+                    border-bottom: 1px solid $line;
+                    
+                    &.bg-none {
+                        border-bottom: none;
+                        
+                        &:after {
+                            content: "";
+                            height: 1px;
+                            background: $line;
+                            display: block;
+                            position: absolute;
+                            width: calc(100% - 60px);
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+            
+            &-normal {
+                padding-bottom: 30px;
+                    
+                .styles {
+                    &:after {
+                        content: "";
+                        height: 1px;
+                        background: $line;
+                        display: block;
+                        position: absolute;
+                        width: calc(100% - 30px);
+                        bottom: 0;
+                    }
+                    
+                    &.bg-color, &.bg-image, &.bg-video { 
+                        &:after {
+                            left: 15px;
+                        }
+                    }
+                }
+            }
+            
+            &-double {
+                padding-bottom: 60px;
+                    
+                .styles {
+                    &:after {
+                        content: "";
+                        height: 1px;
+                        background: $line;
+                        display: block;
+                        position: absolute;
+                        width: calc(100% - 60px);
+                        bottom: 0;
+                    }
+                    
+                    &.bg-color, &.bg-image, &.bg-video { 
+                        &:after {
+                            left: 30px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    .border-col-top {
+        &.gutter {
+            
+            &-none {
+                .styles {
+                    border-top: 1px solid $line;
+                    
+                    &.bg-none {
+                        border-top: none;
+                        
+                        &:before {
+                            content: "";
+                            height: 1px;
+                            background: $line;
+                            display: block;
+                            position: absolute;
+                            width: calc(100% - 60px);
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            
+            &-normal {
+                padding-top: 30px;
+                    
+                .styles {
+                    &:before {
+                        content: "";
+                        height: 1px;
+                        background: $line;
+                        display: block;
+                        position: absolute;
+                        width: calc(100% - 30px);
+                        top: 0;
+                    }
+                    
+                    &.bg-color, &.bg-image, &.bg-video { 
+                        &:before {
+                            left: 15px;
+                        }
+                    }
+                }
+            }
+            
+            &-double {
+                padding-top: 60px;
+                    
+                .styles {
+                    &:before {
+                        content: "";
+                        height: 1px;
+                        background: $line;
+                        display: block;
+                        position: absolute;
+                        width: calc(100% - 60px);
+                        top: 0;
+                    }
+                    
+                    &.bg-color, &.bg-image, &.bg-video { 
+                        &:before {
+                            left: 30px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+table {
+    border: none;
+    
+    thead {
+        td {
+            font-size: 14px;
+            color: $grey;
+            padding-top: 9px;
+            padding-bottom: 9px; 
+        }
+    }
+    
+    tbody {
+        
+    }
+    
+    tr {
+        &:nth-child(even){
+            background: rgba(246,246,246,0.4);
+        }
+    }
+    
+    td {
+        border-color: $line;
+        padding: 17px;
+        border-left: none;
+        border-right: none;
+    }
+}

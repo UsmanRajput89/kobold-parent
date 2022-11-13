@@ -1,0 +1,149 @@
+.slick-track {
+    @include clearfix();
+    position: relative;
+}
+
+.slick-list {
+    @include clearfix();
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+            
+    @media (max-width: $screen-xs-max){
+            margin-bottom: 10px;
+    }
+}
+
+.slick-dots {
+    display: block;
+    list-style: none;
+    @include clearfix();
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    line-height: 0;
+            
+    li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        
+        &:before {
+            display: none;
+        }
+        
+        button {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid $line;
+            background-color: white;
+            color: transparent;
+            line-height: 0;
+            font-size: 0;
+            display: block;
+            margin: 0 7px;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+        
+        &.slick-active {
+            button {
+                background-color: $blue;
+                border-color: $blue;
+            }
+        }
+    }
+}
+
+.slick-arrow {
+    bottom: 0;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 15px;
+    height: auto;
+    line-height: 1;
+    z-index: 10;
+    color: transparent;
+    line-height: 0;
+    font-size: 0;
+    @include transition();
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 8.3333333333%;
+    
+    &.slick-prev, &.slick-next {
+        &:before {
+            color: $blue;
+            font-size: 40px;
+        }
+    }
+    
+    &.slick-prev {
+        right: 100%;
+        
+        &:before {
+            @include fa-icon;
+            content: fa-content($fa-var-angle-left);
+            @include fas();
+        }
+    }
+    
+    &.slick-next {
+        left: 100%;
+        
+        &:before {
+            @include fa-icon;
+            content: fa-content($fa-var-angle-right);
+            @include fas();
+        }
+    }
+}
+
+.slick-slide .styles {
+    height: 100%;
+}
+
+.slick-slide, .slick-arrow, .slick-dots li, .slick-dots button {
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+.slick-dots-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.slider-row {
+    position: relative;
+    
+    &.slider-slides-fade {
+        
+        .slick-slide {
+            opacity: .5;
+            transition: opacity .5s ease-in-out;
+        }
+        
+        .slick-slide.opacidown {
+           opacity: 0;
+        }
+         
+        .slick-current {
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+        }
+         
+        .slick-active{
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+        }
+    }
+}

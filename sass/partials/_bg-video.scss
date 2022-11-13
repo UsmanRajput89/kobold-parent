@@ -1,0 +1,53 @@
+.vbwrapper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        
+        + *:not(.bg-overlay) {
+                position: relative;
+        }
+}
+
+.video-background {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        
+        .ytplayer-container {
+                @extend .embed-responsive;
+                @extend .embed-responsive-16by9;
+                top: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                left: 50%;
+                height: 100%;
+        }
+        
+        iframe, .video-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+        }
+        
+        iframe {
+                opacity: 0;
+                @include transition();
+        }
+        
+        &.loaded {
+                iframe {
+                        opacity: 1;
+                }
+        }
+        .video-overlay {
+                z-index: 1;
+        }
+}

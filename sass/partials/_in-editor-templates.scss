@@ -1,0 +1,32 @@
+.row-col:not(.row-col-6) {
+    .col{
+        @media(min-width: $screen-md){
+            float: left;
+            padding: 0 15px;
+        }
+    }
+}
+
+.row-col-5 {
+    .col {
+        @media(min-width: $screen-md){
+            width: 20%;
+        }
+    }
+}
+
+.row-col-7 {
+    .col {
+        @media(min-width: $screen-md){
+            width: 14.28%;
+        }
+    }
+}
+
+.row-col-8 {
+    .col {
+        @media(min-width: $screen-md){
+            width: 12.5%;
+        }
+    }
+}

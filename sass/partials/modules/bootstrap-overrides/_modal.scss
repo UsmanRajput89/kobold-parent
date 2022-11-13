@@ -1,0 +1,57 @@
+.modal-content-only {
+    .modal-header {
+        padding: 0;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        
+        .close {
+            margin: 0;
+            padding: 10px;
+        }
+    }
+}
+
+.modal-body {
+    
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.modal.centered {
+    text-align: center;
+    padding: 0!important;
+    
+    &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+    }
+    
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    
+        @media(max-width: 859px){
+            width: calc(100% - 30px); 
+        }
+    }
+    
+    .row {
+        &:before, &:after {
+            display: block;
+        }
+    }
+}
+
+.modal-dialog {
+    @media(min-width: 860px){
+        width: 800px;
+    }
+}

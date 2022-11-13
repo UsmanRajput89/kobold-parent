@@ -1,0 +1,123 @@
+.sidebar-items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    li {
+        margin-bottom: 45px;
+    }
+    
+    .widget {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    }
+}
+
+.widgettitle {
+    @extend .h5;
+}
+
+.widget:not(.widget_search){
+    border: 1px solid $line;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.widget_categories {
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        li {
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid $line;
+            
+            a {
+                font-size: 14px;
+                line-height: 1.28;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $blue;
+                font-weight: bold;
+                padding: 17px 0;
+                display: block;
+                @include montserrat();
+            }
+            
+            &.has-children {
+                position: relative;
+                padding-right: 22px;
+                
+                button {
+                    border: none;
+                    background: none;
+                    margin: 0;
+                    outline: none;
+                    line-height: 1;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 5px 5px 5px 8px;
+                    height: 51px;
+    
+                    &:before {
+                        @include fa-icon;
+                        content: fa-content($fa-var-angle-right);
+                        @include fas();
+                        font-size: 20px;
+                        color: $line;
+                    }
+                }
+                
+                &.active {
+                    button {
+                        &:before {
+                            content: fa-content($fa-var-angle-down);
+                            color: $teal;
+                        }
+                    }
+                }
+                .children {
+                    display: none;
+                    margin-left: 20px;
+                    margin-bottom: 17px;
+                    
+                    li {
+                        border-top: none;
+                        
+                        a {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.widget_tag_cloud {
+    
+    .tagcloud {
+        margin: -3px -2px;
+    }
+    
+    a {
+        background-color: #F3F3F3;
+        border: 1px solid #D7D7D7;
+        border-radius: 5px;
+        padding: 5px;
+        color: black;
+        text-decoration: none;
+        line-height: 1;
+        vertical-align: top;
+        margin: 3px 2px;
+        display: inline-block;
+    }
+}

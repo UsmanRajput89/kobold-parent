@@ -1,0 +1,24 @@
+.bg-white {
+    background-color: white;
+}
+
+.bg-grey {
+    background-color: $line;
+}
+
+.bg-cover,
+.bg-image {
+    @include bg-cover();
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    + * {
+        position: relative;
+    }
+}
