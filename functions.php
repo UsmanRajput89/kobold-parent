@@ -10,6 +10,7 @@ $theme_options = array();
 
 
 
+
 /* -SCRIPTS & STYLES- */
 function script_styles_setup() {
     
