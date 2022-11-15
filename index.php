@@ -54,25 +54,25 @@ if( is_category() || is_tag() ){
 	
 	<div class="container-fluid">
 	    <div class="row">
-		<div class="col-sm-12 col-md-10 col-md-offset-1">
-		    <div class="content">
-			<div class="row content-row">
-			    <div class="col-sm-12">
-				<div class="editor-content">
-				    <?php
-				    
-				    if($catdesc = category_description()){
-					echo $catdesc;
-				    }
-				    else {
-					the_archive_title( '<h1 class="text-center">', '</h1>' );
-				    }
-				    ?>
-				</div>
-			    </div>
-			</div>
-		    </div>
-		</div>
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <div class="content">
+                <div class="row content-row">
+                    <div class="col-sm-12">
+                    <div class="editor-content">
+                        <?php
+                        
+                        if($catdesc = category_description()){
+                        echo $catdesc;
+                        }
+                        else {
+                        the_archive_title( '<h1 class="text-center">', '</h1>' );
+                        }
+                        ?>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
 	    </div>
 	</div>	
 

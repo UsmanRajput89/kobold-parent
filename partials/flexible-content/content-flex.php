@@ -10,9 +10,9 @@ if( class_exists('acf') ) {
     if( have_rows('content', $post->ID) ):
     while ( have_rows('content', $post->ID) ) : the_row();
     
-            get_template_part('partials/flexible-content/content-flexible-content');
-    
-            $rowIndex++;
+        get_template_part('partials/flexible-content/content-flexible-content');
+
+        $rowIndex++;
             
     endwhile;
     else: endif;
